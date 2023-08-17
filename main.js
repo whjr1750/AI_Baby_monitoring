@@ -3,7 +3,7 @@ status1 = "";
 objects = [];
 
 function preload() {
-    audio = loadSound("alert_alarm.wav");
+    audio = loadSound("alarm.mp3");
     img = loadImage('baby.jpeg');
 }
 
@@ -26,7 +26,7 @@ function gotResult(error, results) {
     if (error) {
         console.log(error);
     }
-    console.log(results);
+    // console.log(results);
     objects = results;
 }
 
@@ -50,7 +50,6 @@ function draw() {
             rect(objects[i].x, objects[i].y, objects[i].width, objects[i].height);
         }
     }
-
     else {
         document.getElementById("status").innerHTML = "Status : Object Detected";
         document.getElementById("number_of_objects").innerHTML = "Person Not Found" + objects.length;
